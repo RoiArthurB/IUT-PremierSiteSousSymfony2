@@ -1,0 +1,15 @@
+mmi_jub_galerie_index:
+    pattern:  /
+    defaults: { _controller: MMIJubGalerieBundle:FrontOffice:index }
+    
+mmi_jub_galerie:
+    resource: "@MMIJubGalerieBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    prefix:   /
+    
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"

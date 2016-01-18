@@ -1,0 +1,211 @@
+/* "web/css/main.css" */
+
+/****************************************/
+/*			Généralité					*/
+/****************************************/
+
+body {
+	background-color: #444444;
+	margin: 0;
+	color: #bcbcbc;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+}
+
+div#container {
+	display: block;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+#logo{
+	font-family: 'Pacifico', cursive;
+	margin-left: 20%;
+
+}
+
+#menu a{
+	color: white;
+	margin-right:40px;
+}
+
+#menu{
+	font-size: 35px;
+	background-color:#333333;
+	height:80px;
+	line-height:80px;
+}
+
+li {
+	list-style-type:none;
+}
+/****************************************/
+/*				Button					*/
+/****************************************/
+
+#bouton_front{
+	margin-left:30%;
+}
+
+/*	Généralité des boutons	*/
+.button a, div.button a:hover {
+	color: white;
+}
+.button {
+	text-align: center;
+}
+.button {
+	float: left;
+	margin-right: 1em;
+}
+
+/*	Bouton rose	*/
+#button_rose {
+	border-color:transparent;
+  background: #ee6fa0;
+  background-image: -webkit-linear-gradient(top, #ee6fa0, #e06198);
+  background-image: -moz-linear-gradient(top, #ee6fa0, #e06198);
+  background-image: -ms-linear-gradient(top, #ee6fa0, #e06198);
+  background-image: -o-linear-gradient(top, #ee6fa0, #e06198);
+  background-image: linear-gradient(to bottom, #ee6fa0, #e06198);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 19px;
+  padding: 10px 20px 10px 20px;
+  width: 152px;
+}
+#button_rose:hover {
+  background: #e06198;
+  width: 152px;
+}
+
+/*	Bouton gris	*/
+#button_gris {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 19px;
+  background: #999999;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 152px;
+}
+#button_gris:hover {
+  background: #888888;
+  text-decoration: none;
+  width: 152px;
+}
+
+/****************************************/
+/*				Accueil					*/
+/****************************************/
+
+#presentation {
+	font-size: 22px;
+	text-align: center;
+	color: #bcbcbc;
+	margin-top:150px;
+}
+
+#presentation2 {
+	font-size: 22px;
+	text-align: center;
+	color: #bcbcbc;
+	margin-top:10px;
+}
+
+/*	Généralité sur la gestion de compte et la deconnection	*/
+
+
+a#infos, a#infos:hover{
+
+  color: #ffffff;
+  font-size: 19px;
+  
+}
+/****************************************/
+/*				Connection				*/
+/****************************************/
+
+input#username{
+	margin-right:1em;
+}
+div#souvenir {
+	padding-right: 0px;
+    font-size: 16px;
+    padding-top: 1em;
+}
+
+/****************************************/
+/*			Button Switch				*/
+/****************************************/
+
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 13px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Public";
+    padding-right: 10px;
+    background-color: #1CE64E; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "Masqu\00E9";
+    padding-left: 25px;
+    background-color: #DB0D0D; color: #FFFFFF;
+}
+.onoffswitch-switch {
+    display: block; width: 16px; margin: 7px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

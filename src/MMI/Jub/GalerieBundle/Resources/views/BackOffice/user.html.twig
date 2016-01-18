@@ -1,0 +1,9 @@
+<section id="presentation2">
+<h1>Compte de <span style="color: #ee6fa0;text-transform:capitalize;">{{ app.user.username }}</span></h1>
+<a href="{{ path('mmi_jub_galerie_delete_user',{ id: user.id }) }}"> supprimer mon compte </a>
+<!-- src/MMI/Jub/GalerieBundle/views/BackOffice/user.html.twig -->
+
+{{ render(controller("FOSUserBundle:Profile:show")) }}
+{{ render(controller("FOSUserBundle:Profile:edit")) }}
+
+</section>

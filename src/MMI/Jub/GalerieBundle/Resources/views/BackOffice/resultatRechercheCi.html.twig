@@ -1,0 +1,29 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+<h1> Voici la liste des utilisateurs qui aiment ce centre d'intérêt</h1>
+			<!-- src/MMI/Jub/GalerieBundle/views/BackOffice/resultatRecherCi.html.twig -->
+<br>
+
+{% for ci in possede %}
+<table>
+	<tbody>
+		{% if ci.masque == false %}	
+		<tr>
+			<td>		
+				<a style="text-transform:capitalize" href="{{ path('mmi_jub_galerie_show_cis',{ id: ci.User.id }) }}"> {{ ci.User.username }} </a>
+			</td>
+		</tr>
+		{% endif %}
+	</tbody>
+</table>
+{% endfor %}
+
+<br>
+
+
+<a id="button_gris" class="button" type="button" onclick="window.history.back();">Retour</a>
+
+		
+{% endblock %}

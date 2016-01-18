@@ -1,0 +1,48 @@
+{% for ci in possede %}
+<table style="margin: 0 auto">
+<tbody>
+<tr>
+<td>
+	<div class="onoffswitch" id="{{ci.ciP.NomCI}}">
+	    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="{{ ci.ciP.NomCi[:3	] }}" 
+	   	{% if ci.masque == false %}
+	    checked
+	    {% endif %} disabled>
+	    <label class="onoffswitch-label" for="{{ ci.ciP.NomCi[:3] }}">
+	        <span class="onoffswitch-inner"></span>
+	        <span class="onoffswitch-switch"></span>
+	    </label>
+	</div>
+</td>
+<td>
+{#% set url = '/upload/cis/'~ci.id~'.'~ci.nomCi %#}
+<span style="text-transform:capitalize;">
+	{{ ci.ciP.NomCi }}
+	{#{ ci->getId() }#}
+</span>
+</td>
+<td>
+	{% if ci.masque == false %}
+<form action="{{ path('mmi_jub_galerie_masque_ci',{ id: ci.ciP.id , masque: 0  }) }}">
+<button class="button" type="subscribe" href="">Masquer</button>
+</form>
+	{% else %}
+<form action="{{ path('mmi_jub_galerie_masque_ci',{ id: ci.ciP.id , masque: 1  }) }}">
+<button class="button" type="subscribe" href="">Afficher</button>
+</form>
+	{% endif %}
+</td>
+<td>
+<form action="{{ path('mmi_jub_galerie_recherche_ci',{ id: ci.ciP.id }) }}">
+<button class="button" type="subscribe" href="">Voir qui aime ce centre d'intérêt</button>
+</form>
+</td>
+<td>
+<div class="button" >
+<a href="{{ path('mmi_jub_galerie_delete_ci',{ id: ci.ciP.id }) }}">Supprimer</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+{% endfor %} 

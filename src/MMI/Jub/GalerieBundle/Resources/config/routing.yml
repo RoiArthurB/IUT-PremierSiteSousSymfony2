@@ -1,0 +1,52 @@
+#                        Partie FrontOffice
+
+mmi_jub_galerie_homepage:
+    path:     /
+    defaults: { _controller: MMIJubGalerieBundle:FrontOffice:index }
+
+#                        Partie BackOffice
+    
+mmi_jub_galerie_admin:
+    path:     /admin
+    defaults: { _controller: MMIJubGalerieBundle:BackOffice:index }
+mmi_jub_galerie_profil:
+    path:     /profil
+    defaults: { _controller: MMIJubGalerieBundle:BackOffice:profil }     
+mmi_jub_galerie_upload:
+    path:     /upload
+    defaults: { _controller: MMIJubGalerieBundle:BackOffice:upload } 
+mmi_jub_galerie_delete_user:
+    path:     /delete/user/{id}
+    defaults: { _controller: MMIJubGalerieBundle:BackOffice:deleteUser }
+mmi_jub_galerie_delete_ci:
+    path:     /delete/ci/{id}
+    defaults: { _controller: MMIJubGalerieBundle:BackOffice:deleteCi }
+mmi_jub_galerie_show_users:
+    path:     /admin/show/users
+    defaults: { _controller: MMIJubGalerieBundle:BackOffice:showUsers }
+   
+mmi_jub_galerie_show_cis:
+    path: /show/galerie/{id}
+    defaults: { _controller: MMIJubGalerieBundle:BackOffice:showGalerieAutre }
+   
+mmi_jub_galerie_liste:    
+    path:     /liste
+    defaults: { _controller: MMIJubGalerieBundle:BackOffice:listeCi }
+mmi_jub_galerie_upload_ci_list:
+    path:     /upload/cis/{id}
+    defaults: { _controller: MMIJubGalerieBundle:BackOffice:uploadCiList }
+
+mmi_jub_galerie_liste_delete:    
+    path:     /liste/delete
+    defaults: { _controller: MMIJubGalerieBundle:BackOffice:listeCiDelete }
+mmi_jub_galerie_delete_ci_list:
+    path:     /delete/cis/{id}
+    defaults: { _controller: MMIJubGalerieBundle:BackOffice:deleteCiList }
+     
+mmi_jub_galerie_masque_ci:
+    path:     /masque/cis/{id}/{masque}
+    defaults: {_controller: MMIJubGalerieBundle:BackOffice:masqueCi }
+    
+mmi_jub_galerie_recherche_ci:
+    path:     /recherche/cis/{id}
+    defaults: {_controller: MMIJubGalerieBundle:BackOffice:rechercheCi }    

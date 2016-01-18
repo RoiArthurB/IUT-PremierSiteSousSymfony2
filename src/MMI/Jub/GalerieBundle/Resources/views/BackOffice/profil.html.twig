@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} Profil {% endblock %}
+
+{% block body %}
+<!-- src/MMI/Jub/GalerieBundle/views/BackOffice/profil.html.twig --> 
+
+<section id="presentation2">
+<h1>Profil de <span style="color: #ee6fa0;text-transform:capitalize;">{{ app.user.username }}</span></h1>
+<!-- src/MMI/Jub/GalerieBundle/views/BackOffice/profil_perso.html.twig -->
+<h2> Mes centres d'intérêt </h2>
+
+{{  render(controller("MMIJubGalerieBundle:BackOffice:showGalerie",{id: user.id})) }}
+
+<h2>Ajouter un centre d'intérêt parmi la liste</h2>
+
+{{ render(controller("MMIJubGalerieBundle:BackOffice:listeCi")) }}
+
+<h2>Ajouter un centre d'intérêt </h2>
+
+{{ render(controller("MMIJubGalerieBundle:BackOffice:upload")) }}
+
+<br> 
+{% if role=='ROLE_ADMIN' %}
+<h2>Supprimer un centre d'intérêt de la liste</h2>
+
+{{ render(controller("MMIJubGalerieBundle:BackOffice:listeCiDelete")) }}
+{% endif %}
+
+</section>
+{% endblock %}

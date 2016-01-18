@@ -1,0 +1,9 @@
+﻿<div>
+<ul>
+{% for ci in cis_tt %}
+ <li>
+ 	<a href="{{ path('mmi_jub_galerie_delete_ci_list',{ id: ci.id }) }}"> {{ ci.nomCi }} </a>
+ </li>
+{% endfor %} 	
+</ul>
+</div>

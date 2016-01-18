@@ -1,0 +1,10 @@
+﻿<div>
+<!-- listeRecherche.html.twig -->
+<ul>
+{% for ci in cis_tt %}
+ <li  style="display:inline;text-transform:capitalize;">
+ 	<a href="{{ path('mmi_jub_galerie_recherche_ci',{ id: ci.id }) }}"> {{ ci.nomCi }} </a> ; 
+ </li>
+{% endfor %} 	
+</ul>
+</div>

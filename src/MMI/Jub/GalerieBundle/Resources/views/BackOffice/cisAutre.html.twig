@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+<!-- src/MMI/Jub/GalerieBundle/views/BackOffice/cisAutre.html.twig -->
+
+<h1>Vous êtes sur le profil de <span style="color: #ee6fa0;text-transform:capitalize;">{{user}}</span></h1>
+
+<ul style="margin: 0 auto">
+{% if possede == none %}
+	<h2>Cette personne n'a pas de centre d'intérêts</h2>
+{% else %}
+	{% for ci in possede %}
+		{% if ci.masque == false %}
+			
+			<li> <h2> {{ ci.ciP.NomCi }} </h2> </li>
+		{% endif %}
+	{% endfor %} 
+{% endif %}
+
+<a id="button_gris" class="button" type="button" onclick="window.history.back();">Retour</a>
+
+{% endblock %}

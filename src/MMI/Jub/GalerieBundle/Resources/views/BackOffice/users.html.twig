@@ -1,0 +1,10 @@
+<div>
+<!-- src/MMI/Jub/GalerieBundle/views/BackOffice/users.html.twig -->
+<ul>
+{% for user in users %}
+ <li  style="text-transform:capitalize">
+ 	 <a href="{{ path('mmi_jub_galerie_show_cis',{ id: user.id }) }}">Voir {{ user.username }} </a> <button href="{{ path('mmi_jub_galerie_delete_user',{ id: user.id }) }}"> Supprimer </button>
+ </li>
+{% endfor %} 	
+</ul>
+</div>

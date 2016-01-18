@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} Administration {% endblock %}
+
+{% block body %}
+<!-- src/MMI/Jub/GalerieBundle/views/BackOffice/index.html.twig -->
+{% if role=='ROLE_ADMIN' %}
+  {% include 'MMIJubGalerieBundle:BackOffice:admin.html.twig' %}
+{% endif %}  
+
+  {% include 'MMIJubGalerieBundle:BackOffice:user.html.twig' %}
+{% endblock %}
